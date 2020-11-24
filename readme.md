@@ -15,7 +15,8 @@
     https://www.selvamercado.com.ar/
 
 - Integrantes del grupo:
-    Francisco Frachia - 
-
+    Francisco Frachia 
+    Matias Pancorvo
+    Quique (falta poner nombre completo)
 3) Wireframe
     https://www.figma.com/file/W43imEzVddUfDj7cCAhKEC/Natural-Mystic-Proyecto-Integrador?node-id=0%3A1
