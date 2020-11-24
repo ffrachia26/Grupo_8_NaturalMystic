@@ -1,10 +1,12 @@
-1) Aca va el link del repositorio grupal
+1) Link del repositorio grupal:
+    https://github.com/ffrachia26/Proyecto_Integrador
 
 2) Archivo Readme.md 
 - Tematica del sitio: 
+    "Natural Mystic"
     Venta de productos alimenticios. Promoviendo la alimentacion natural y saludable.
 - Publico Objetivo: 
-    Cliente que necesita y busca un cambio de alimentacion. Con tendencia a un estilo de vida mas saludable. Orientado tambien a dietas vegetarianas y veganas.
+    Cliente que necesita y busca un cambio de alimentacion. Con tendencia a un estilo de vida mas saludable. Orientado principalmente a dietas vegetarianas y veganas.
 - Listado de  paginas referentes: 
     https://www.tiendadirecta.com.ar/
     https://www.feliceslasvacas.com/
