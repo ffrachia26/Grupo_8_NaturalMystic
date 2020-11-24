@@ -1,5 +1,5 @@
 1) Link del repositorio grupal:
-    https://github.com/ffrachia26/Proyecto_Integrador
+    https://github.com/ffrachia26/Grupo_8_NaturalMystic
 
 2) Archivo Readme.md 
 - Tematica del sitio: 
