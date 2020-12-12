@@ -49,7 +49,7 @@ header input#search{
 
 .iconsearch{
     position: absolute;
-    top: 8px;
+    top: 5px;
     right: 20px;
     font-size: 25px;
     color: silver;
@@ -145,4 +145,39 @@ div.respmenu input.hola{
     top: 10px;
     font-size: large;
     color: #8e8d8c;
+}
+
+/*----------SECCION DE PRODUCTO-----------*/
+
+section.detailProduct{
+    margin: 15px;
+}
+
+section.detailProduct hr{
+    height: 5px;
+    background-color: #206200;
+    margin-bottom: 15px;
+}
+
+section.detailProduct img{
+    width: 100%;
+}
+
+section.detailProduct h1{
+    margin-bottom: 15px;
+}
+
+section.detailProduct h3{
+    margin-bottom: 15px;
+}
+
+section.detailProduct div.imgSmall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+section.detailProduct div.imgSmall img{
+    width: 23%;
 }
