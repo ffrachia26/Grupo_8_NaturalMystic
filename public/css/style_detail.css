@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #EEEEEE;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*--------HEADER---------*/
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+header .containerlogo{
+    margin:0 auto;
+    text-align: center;
+}
+
+header .logo{
+    width: 60%;
+}
+
+header .containersearch{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin: 15px 30px;
+}
+
+header input#search{
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    padding-left: 15px;
+    padding-right: 35px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;  
+}
+
+.iconsearch{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    font-size: 25px;
+    color: silver;
+}
+
+/*----------MENU RESPONSIVE -----------*/
+
+.respmenu {
+    color: black;
+    position: relative;
+    min-height: 30px;
+    width: 100%;
+}
+
+div.respmenu input.hola{
+    width: 100%;
+    position: absolute;
+}
+
+.respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    font-size: 30px;
+    pointer-events: none;
+  }
+
+.respmenu input[type="checkbox"] {
+    opacity: 80%; 
+}
+
+.respmenu a { 
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e8eae6;
+    background: #206200;
+    text-shadow: 1px 1px black;
+    opacity: 85%;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: relative;  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;  
+    color: #8e8d8c;
+  }
+   
+  .respmenu input[type="checkbox"] {
+    opacity: 0; 
+  }
+   
+  .respmenu nav {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+   
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+   
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+    pointer-events: none;
+  }
+   
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+    pointer-events: none;
+  }
+
+/*----------ICONOS LOGIN Y CARRITO COMPRAS -----------*/
+
+.fa-user-times{
+    position: absolute;
+    right: 25px;
+    top: 6px;
+    font-size: x-large;
+    color: #8e8d8c;
+}
+
+.fa-shopping-cart{
+    position: absolute;
+    right: 80px;
+    top: 10px;
+    font-size: large;
+    color: #8e8d8c;
+}
