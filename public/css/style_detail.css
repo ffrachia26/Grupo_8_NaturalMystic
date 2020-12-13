@@ -153,22 +153,63 @@ section.detailProduct{
     margin: 15px;
 }
 
+section.detailProduct h1{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
 section.detailProduct hr{
     height: 5px;
     background-color: #206200;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-section.detailProduct img{
+section.detailProduct span.path{
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+/*----------SECCION DE PRECIO, STAR Y FAVORITO-----------*/  
+
+section.detailProduct div.starPrice p{
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+section.detailProduct div.starPrice div.star{
+    color: #d8d037;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+section.detailProduct div.starPrice div.star span{
+    color: black;
+    font-size: 12px;
+}
+
+section.detailProduct div.starPrice div.precio{
+    color: black;
+    font-size: 30px;
+    -webkit-text-stroke: medium;
+}
+
+section.detailProduct div.starPrice div.cuotas p{
+    color: rgb(71, 70, 70);
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+/*----------SECCION DE IMAGENES-----------*/ 
+
+section.detailProduct div.imgBig{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+section.detailProduct div.imgBig img{
     width: 100%;
-}
-
-section.detailProduct h1{
-    margin-bottom: 15px;
-}
-
-section.detailProduct h3{
-    margin-bottom: 15px;
 }
 
 section.detailProduct div.imgSmall {
@@ -181,3 +222,45 @@ section.detailProduct div.imgSmall {
 section.detailProduct div.imgSmall img{
     width: 23%;
 }
+
+/*----------SECCION DE COMPRAR Y REDES SOCIALES-----------*/ 
+section.detailProduct p.description{
+    margin: 25px auto;
+    
+}
+
+section.detailProduct div.comprar{
+    margin: 25px auto;
+    background-color: #206200;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+section.detailProduct p.labelredes{
+    text-align: center;
+    font-size: 12px;
+}
+
+section.detailProduct div.addtolist{
+    font-size: 12px;
+    width: fit-content;
+    background-color: #d8d037;
+    text-align: -webkit-right;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.rrss{
+    display: flex;
+    justify-content: space-around;
+    font-size: xx-large;
+    text-align: right;
+    margin-top: 25px;
+    opacity: 65%;
+}
+
