@@ -96,9 +96,10 @@ ul {
     padding: 0px;
     display: flex;
     justify-content: space-between;
-    background-color: silver;
+    
     width: 80%;
     margin: 0 auto;
+    border-radius: 8%;
     
 }
 
