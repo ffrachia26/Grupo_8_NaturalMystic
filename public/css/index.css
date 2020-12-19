@@ -347,7 +347,244 @@ footer div.derechos p{
     text-align: center;
 }
 
-/*----------SECCION MEDIA QUERYS-----------*/ 
+/*----------------SECCION MEDIA QUERYS-------------*/ 
+
+
+
+
+
+/*---------Minimo 768px----------*/
+@media (min-width: 768px), (max-width: 1023px) {
+    .respmenu {
+        display: none;
+    } 
+
+    header{
+        margin-top: 25px;
+    }
+
+    header .containerlogo{
+        width: 40%;
+    }
+
+    header .containersearch{
+        width: 50%;
+    }
+
+    .menuNoResposive{
+    display: flex;
+    margin-top: 15px;
+    align: flex-end;
+    justify-content: center;
+    width: 100%;
+    }
+
+    .menuNoResposive ul{
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    margin-top: 25px;
+    }
+
+    .menuNoResposive ul li{
+    list-style: none;
+    text-transform: uppercase;
+    }
+
+    .menuNoResposive ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    .inicio, .quienes, .cat1, .cat2, .cat3, .cat4, .cat5, .contacto {
+        font-size: 11px;
+      }
+
+    section.home{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    section.home hr#hr1{
+        width: 100%;
+        order: -2;
+    }
+
+    section.home hr{
+        width: 100%;
+    }
+
+    
+    
+ /*------------IMAGEN--------*/
+.imagenespasando img {
+    width: 100%;
+    border-radius: 2%;
+    height: 285px;
+}
+
+/*------------DESTACADOS----------*/
+
+.destacados {
+    margin: 15px auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+/*------------PRODUCTOS------------*/
+
+div.productos {
+    margin: 20px auto;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.productos div {
+    background-color: #a22b2b;
+    height: 200px;
+    width: 15%;
+    border-radius: 6%;
+    margin: 15px auto;
+    padding: 11px;
+    text-align: center;
+}
+
+
+/*------------BANNER----------*/
+div.banners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    justify-content: space-evenly;}
+
+.banner1, .banner2, .banner3 {
+    background-color: #1e905e;
+    height: 200px;
+    border-radius: 6%;
+    text-align: center;
+    margin: 15px auto;
+    width: 30%;
+    padding: 50px;
+ }
+
+
+ /*----------------GALERIA IG Y FORMULARIO----------*/
+
+ .galeriaformulario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    justify-content: space-evenly;
+ } 
+
+ .galeriaig, .formulario {
+     background-color: #6e711e;
+     width: 46%;
+     height: 350px;
+     text-align: center;
+     border-radius: 6%;
+     margin: 15px auto;
+     padding: 50px;
+ }
+
+
+ /*-------------MEDIOS DE PAGO----------*/
+
+
+ .mediosPago{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     width: 90%;
+     margin: 20px auto;
+     justify-content: space-evenly;
+ }
+
+.mediosPago p {
+    font-size: 28px;
+    text-align: center;
+}
+
+.mediosPago div.rrss{
+    display: flex;
+    justify-content: space-between;
+    opacity: 50%;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    font-size: 60px;
+
+}
+
+.fabfa-cc-visa {
+    margin: 0 auto;
+}
+
+.rrss i{
+    margin: 0 18px;
+}
+
+
+
+    
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+        padding-top: 35px;
+    }
+
+    footer div.contacto{
+        width: 30%;
+        padding-top: 0px;
+        padding-right: 5px;
+    }
+
+    footer div.rrss2{
+        width: 40%;
+        margin: 0px;
+        order: -1;
+        text-align: center;
+        align-content: flex-start;
+    }
+
+    footer div.menuFooter{
+        width: 30%;
+        margin: 0px;
+        order: -2;
+        padding-left: 20px;
+    }
+
+    footer div.derechos{
+        width: 100%;
+        margin: 0px;
+        padding-top: 5px;
+        margin-top: 25px;
+    }
+
+    footer div.derechos p{
+        padding: 0px;
+    }
+
+    footer div.rrss2 div.icons i {
+        letter-spacing: 26px;
+    }
+    
+
+}
+
+
+
+
+
+/*----------------Minimo 1024px------------*/
 
 @media (min-width:1024px){
 
@@ -361,6 +598,7 @@ footer div.derechos p{
 
     header .containerlogo{
         width: 40%;
+        margin: -7px;
     }
 
     header .containersearch{
@@ -410,6 +648,10 @@ footer div.derechos p{
     
     
  /*------------IMAGEN--------*/
+.imagenespasando {
+    margin: 10px 100px;
+}
+
 .imagenespasando img {
     width: 100%;
     border-radius: 2%;
@@ -519,7 +761,9 @@ div.banners {
     margin: 0 auto;
 }
 
-
+.rrss i{
+    margin: 0 45px;
+}
 
 
 
@@ -566,4 +810,3 @@ div.banners {
 
 
 }
-
