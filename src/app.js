@@ -1,29 +1,29 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const rutaHome = require('../routes/home')
+const rutaProducts = require('../routes/products')
+const rutaPurchase = require('../routes/purchase')
+const rutaLogin = require('../routes/login')
+const rutaRegister = require('../routes/register')
 
 app.listen(3000, function(){
     console.log('El server esta corriendo en el puerto 3000');
     console.log('http://localhost:3000')
 });
 
-    app.get('/', function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/index.html', 'utf8'))           
-    });
+    app.use('/', rutaHome);
 
-    app.get('/producto/detail', function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/detail.html', 'utf8'))           
-    }); 
+    app.use('/products', rutaProducts);
 
-    app.get('/purchase', function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/purchase.html', 'utf8'))           
-    }); 
+    app.use('/purchase', rutaPurchase)
 
-    app.get('/register', function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/register.html', 'utf8'))           
-    }); 
+    app.use('/purchase', rutaLogin)
 
-        app.get('/login', function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/login.html', 'utf8'))           
-     }); 
+    app.use('/register', rutaRegister)
+
+    
+
+   
+        
 
