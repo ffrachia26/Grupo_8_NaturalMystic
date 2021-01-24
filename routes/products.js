@@ -1,9 +1,7 @@
 let express = require('express');
-
+let productsController = require('../controllers/productsController.js')
 let router = express.router();
 
-router.get('/producto/detail', function(req,res){
-    res.send(fs.readFileSync(__dirname + '/views/detail.html', 'utf8'))           
-}); 
+router.get('/producto/detail', productsController.products); 
 
 module.exports = router

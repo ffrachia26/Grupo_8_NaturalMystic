@@ -1,9 +1,7 @@
 let express = require('express');
-
+let loginController = require('../controllers/loginController.js')
 let router = express.router();
 
-router.get('/login', function(req,res){
-    res.send(fs.readFileSync(__dirname + '/views/login.html', 'utf8'))           
- }); 
+router.get('/login', loginController.login); 
 
 module.exports = router

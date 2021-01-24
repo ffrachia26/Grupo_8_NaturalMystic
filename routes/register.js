@@ -1,11 +1,9 @@
 
 let express = require('express');
-
+let registerController = require('../controllers/registerController.js')
 let router = express.router();
 
-router.get('/register', function(req,res){
-    res.send(fs.readFileSync(__dirname + '/views/register.html', 'utf8'))           
-}); 
+router.get('/register', registerController.register); 
 
 
 module.exports = router

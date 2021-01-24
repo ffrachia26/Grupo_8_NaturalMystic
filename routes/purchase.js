@@ -1,9 +1,8 @@
 let express = require('express');
+let purchaseController = require('../controllers/purchaseController.js')
 
 let router = express.router();
 
-router.get('/purchase', function(req,res){
-    res.send(fs.readFileSync(__dirname + '/views/purchase.html', 'utf8'))           
-}); 
+router.get('/purchase', purchaseController.purchase); 
 
 module.exports = router
