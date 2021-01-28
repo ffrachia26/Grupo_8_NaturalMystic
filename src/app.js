@@ -12,6 +12,10 @@ app.listen(3000, function(){
     console.log('http://localhost:3000')
 });
 
+    app.set('view engine', 'ejs')
+
+    app.set('view', __dirname + '/views')
+
     app.use('/', rutaHome);
 
     app.use('/products', rutaProducts);
