@@ -16,6 +16,8 @@ app.listen(3000, function(){
 
     app.set('view', __dirname + '/views')
 
+    app.use(express.static(__dirname + '/public'))
+
     app.use('/', rutaHome);
 
     app.use('/products', rutaProducts);
