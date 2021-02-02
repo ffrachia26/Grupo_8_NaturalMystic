@@ -24,6 +24,7 @@
       <div class="right">
         <span class="loginwith">Sign in with<br />social network</span>
         
+<<<<<<< HEAD
         <button class="social-signin facebook">Log in with facebook</button>
         <button class="social-signin twitter">Log in with Twitter</button>
         <button class="social-signin google">Log in with Google+</button>
@@ -32,4 +33,15 @@
     </div>
   </body>
 
+=======
+            signUpButton.addEventListener('click', () => {
+                container.classList.add("right-panel-active");
+            });
+            signInButton.addEventListener('click', () => {
+                container.classList.remove("right-panel-active");
+            });
+        </script>
+        <%- include('partials/footer.ejs')%>
+</body>
+>>>>>>> 81b8d057204140c000aae7247aa42bb584358f8e
 </html>
