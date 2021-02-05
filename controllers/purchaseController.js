@@ -1,4 +1,4 @@
-const controlador = {
+const purchaseController = {
     purchase: function(req,res){
         res.send(fs.readFileSync(__dirname + '/views/purchase.html', 'utf8'))           
     }

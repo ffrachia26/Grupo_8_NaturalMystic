@@ -1,4 +1,4 @@
-const controlador = {
+const productsController = {
     products: function(req,res){
         res.send(fs.readFileSync(__dirname + '/views/detail.html', 'utf8'))           
     }

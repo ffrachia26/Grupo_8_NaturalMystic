@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const rutaHome = require('../routes/home')
-const rutaProducts = require('../routes/products')
-const rutaPurchase = require('../routes/purchase')
-const rutaLogin = require('../routes/login')
-const rutaRegister = require('../routes/register')
-
+const rutaHome = require('./routes/home')
+const rutaProducts = require('./routes/products')
+const rutaPurchase = require('./routes/purchase')
+const rutaLogin = require('./routes/login')
+const rutaRegister = require('./routes/register')
+const path = require('path');
 app.listen(3000, function(){
     console.log('El server esta corriendo en el puerto 3000');
     console.log('http://localhost:3000')
@@ -14,9 +14,9 @@ app.listen(3000, function(){
 
     app.set('view engine', 'ejs')
 
-    app.set('view', __dirname + '/views')
+    app.set('views', './src/views')
 
-    app.use(express.static(__dirname + '/public'))
+    app.use(express.static(path.join('public')));
 
     app.use('/', rutaHome);
 

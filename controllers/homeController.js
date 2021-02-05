@@ -1,5 +1,5 @@
-const controlador = {
-    home : function(req,res){
+let homeController = {
+    'home' : function(req,res){
         res.render('index')           
     }
 }

@@ -1,7 +1,8 @@
-let express = require('express');
+var express = require('express');
+var router = express.Router();
 let purchaseController = require('../controllers/purchaseController.js')
 
-let router = express.router();
+
 
 router.get('/purchase', purchaseController.purchase); 
 
