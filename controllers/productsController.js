@@ -1,6 +1,6 @@
-const productsController = {
-    products: function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/detail.html', 'utf8'))           
+let productsController = {
+    'products': function(req,res){
+        res.render('detail')           
     }
 }
 

@@ -24,7 +24,7 @@ app.listen(3000, function(){
 
     app.use('/purchase', rutaPurchase)
 
-    app.use('/purchase', rutaLogin)
+    app.use('/login', rutaLogin)
 
     app.use('/register', rutaRegister)
 

@@ -4,6 +4,6 @@ let purchaseController = require('../controllers/purchaseController.js')
 
 
 
-router.get('/purchase', purchaseController.purchase); 
+router.get('/', purchaseController.purchase); 
 
 module.exports = router

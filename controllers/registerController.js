@@ -1,6 +1,6 @@
-const registerController = {
-    register: function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/register.html', 'utf8'))           
+let registerController = {
+    'register': function(req,res){
+        res.render('register')           
     }
 }
 

@@ -1,6 +1,6 @@
-const loginController = {
-    login: function(req,res){
-        res.send(fs.readFileSync(__dirname + '/views/login.html', 'utf8'))           
+let loginController = {
+    'login': function(req,res){
+        res.render('login')           
      }
 }
 
