@@ -13,13 +13,10 @@ body{
     background-color: #EEEEEE;
     font-family: 'Poppins', sans-serif;
 }
-/*--
-
-
 
 /*--------HEADER---------*/
 
-/*--header{
+header{
     display: flex;
     flex-wrap: wrap;
     margin-top: 15px;
@@ -63,7 +60,7 @@ header input#search{
 
 /*----------MENU RESPONSIVE -----------*/
 
-/*--.menuNoResposive{
+.menuNoResposive{
     display: none;
 }
 
@@ -138,7 +135,6 @@ div.respmenu input.hola{
     display: none;
     pointer-events: none;
   }
-  
 
 /*----------ICONOS LOGIN Y CARRITO COMPRAS -----------*/
 
@@ -170,101 +166,9 @@ section.home hr{
 
 
 
-/*------------IMAGEN--------*/
-.imagenespasando img {
-    width: 100%;
-    border-radius: 2%;
-}
-
-/*------------DESTACADOS----------*/
-
-.destacados {
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-/*------------PRODUCTOS------------*/
-
-div.productos {
-    margin: 20px auto;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-div.productos div {
-    background-color: #a22b2b;
-    height: 200px;
-    width: 45%;
-    border-radius: 6%;
-    margin: 15px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-
-/*------------BANNER----------*/
-/*div.banners {}*/
-
-.banner1, .banner2, .banner3 {
-    background-color: #1e905e;
-    height: 200px;
-    border-radius: 6%;
-    text-align: center;
-    margin: 15px auto;
-    width: 80%;
- }
-
-
- /*----------------GALERIA IG Y FORMULARIO----------*/
-
- /*.galeriaformulario{} */
-
- .galeriaig, .formulario {
-     background-color: #6e711e;
-     width: 90%;
-     height: 350px;
-     text-align: center;
-     border-radius: 6%;
-     margin: 15px auto;
- }
-
-
- /*-------------MEDIOS DE PAGO----------*/
-/*
- .mediosdepago {
-    display: flex;
-    justify-content: center;
- }*/
-
- .mediosPago{}
-
-.mediosPago p {
-    font-size: 28px;
-    text-align: center;
-}
-
-.mediosPago div.rrss{
-    display: flex;
-    justify-content: space-around;
-    opacity: 50%;
-    margin-top: 55px;
-    margin-bottom: 55px;
-    font-size: 60px;
-}
-
-
-
-
-
-
-
-
 /*----------SECCION FOOTER-----------*/ 
 
-/*--footer{
+footer{
     background-color: #313131;
     height: 500px;
 }
@@ -351,15 +255,9 @@ footer div.derechos p{
     text-align: center;
 }
 
-/*----------------SECCION MEDIA QUERYS-------------*/ 
-
-
-
-
-
 /*---------Minimo 768px----------*/
 @media (min-width: 768px), (max-width: 1023px) {
-   /*-- .respmenu {
+    .respmenu {
         display: none;
     } 
 
@@ -417,127 +315,9 @@ footer div.derechos p{
     section.home hr{
         width: 100%;
     }
-
+/*--------FOOTER-------*/
     
-    
- /*------------IMAGEN--------*/
-.imagenespasando img {
-    width: 100%;
-    border-radius: 2%;
-    height: 285px;
-}
-
-/*------------DESTACADOS----------*/
-
-.destacados {
-    margin: 15px auto;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-/*------------PRODUCTOS------------*/
-
-div.productos {
-    margin: 20px auto;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-div.productos div {
-    background-color: #a22b2b;
-    height: 200px;
-    width: 15%;
-    border-radius: 6%;
-    margin: 15px auto;
-    padding: 11px;
-    text-align: center;
-}
-
-
-/*------------BANNER----------*/
-div.banners {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px auto;
-    width: 90%;
-    justify-content: space-evenly;}
-
-.banner1, .banner2, .banner3 {
-    background-color: #1e905e;
-    height: 200px;
-    border-radius: 6%;
-    text-align: center;
-    margin: 15px auto;
-    width: 30%;
-    padding: 50px;
- }
-
-
- /*----------------GALERIA IG Y FORMULARIO----------*/
-
- .galeriaformulario{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px auto;
-    width: 90%;
-    justify-content: space-evenly;
- } 
-
- .galeriaig, .formulario {
-     background-color: #6e711e;
-     width: 46%;
-     height: 350px;
-     text-align: center;
-     border-radius: 6%;
-     margin: 15px auto;
-     padding: 50px;
- }
-
-
- /*-------------MEDIOS DE PAGO----------*/
-
-
- .mediosPago{
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     width: 90%;
-     margin: 20px auto;
-     justify-content: space-evenly;
- }
-
-.mediosPago p {
-    font-size: 28px;
-    text-align: center;
-}
-
-.mediosPago div.rrss{
-    display: flex;
-    justify-content: space-between;
-    opacity: 50%;
-    margin-top: 55px;
-    margin-bottom: 55px;
-    font-size: 60px;
-
-}
-
-.fabfa-cc-visa {
-    margin: 0 auto;
-}
-
-.rrss i{
-    margin: 0 18px;
-}
-
-
-
-    
-    /*--footer{
+    footer{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -584,15 +364,11 @@ div.banners {
 
 }
 
-
-
-
-
 /*----------------Minimo 1024px------------*/
 
 @media (min-width:1024px){
 
-    /*--.respmenu {
+    .respmenu {
         display: none;
     } 
 
@@ -649,130 +425,9 @@ div.banners {
         width: 100%;
     }
 
+    /*--------FOOTER-------*/
     
-    
- /*------------IMAGEN--------*/
-.imagenespasando {
-    margin: 10px 100px;
-}
-
-.imagenespasando img {
-    width: 100%;
-    border-radius: 2%;
-    height: 285px;
-}
-
-/*------------DESTACADOS----------*/
-
-.destacados {
-    margin: 15px auto;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-/*------------PRODUCTOS------------*/
-
-div.productos {
-    margin: 20px auto;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-div.productos div {
-    background-color: #a22b2b;
-    height: 200px;
-    width: 15%;
-    border-radius: 6%;
-    margin: 15px auto;
-    padding: 30px;
-    text-align: center;
-}
-
-
-/*------------BANNER----------*/
-div.banners {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px auto;
-    width: 90%;
-    justify-content: space-evenly;}
-
-.banner1, .banner2, .banner3 {
-    background-color: #1e905e;
-    height: 200px;
-    border-radius: 6%;
-    text-align: center;
-    margin: 15px auto;
-    width: 30%;
-    padding: 50px;
- }
-
-
- /*----------------GALERIA IG Y FORMULARIO----------*/
-
- .galeriaformulario{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px auto;
-    width: 90%;
-    justify-content: space-evenly;
- } 
-
- .galeriaig, .formulario {
-     background-color: #6e711e;
-     width: 46%;
-     height: 350px;
-     text-align: center;
-     border-radius: 6%;
-     margin: 15px auto;
-     padding: 50px;
- }
-
-
- /*-------------MEDIOS DE PAGO----------*/
-
-
- .mediosPago{
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     width: 90%;
-     margin: 20px auto;
-     justify-content: space-evenly;
- }
-
-.mediosPago p {
-    font-size: 28px;
-    text-align: center;
-}
-
-.mediosPago div.rrss{
-    display: flex;
-    justify-content: space-between;
-    opacity: 50%;
-    margin-top: 55px;
-    margin-bottom: 55px;
-    font-size: 60px;
-
-}
-
-.fabfa-cc-visa {
-    margin: 0 auto;
-}
-
-.rrss i{
-    margin: 0 45px;
-}
-
-
-
-    
-    /*footer{
+    footer{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -813,4 +468,4 @@ div.banners {
     };
 
 
-}*/}}
+}
