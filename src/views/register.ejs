@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/css/register.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></head>
-
-    
-</head>
-<body>
+<%- include('./partials/head', {archivoCss: "register"})%>
   <%- include('./partials/header.ejs')%>
+  <hr>
   <div id="login-box">
     <div class="box">
       <h1>Register</h1>
@@ -26,10 +15,8 @@
       <input type="submit" name="signup_submit" value="Sign" />
     </form>
     </div>
+  </div>
     
     
     <%- include('./partials/footer.ejs')%>
 
-</body>
-
-</html>

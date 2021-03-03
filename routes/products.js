@@ -8,6 +8,7 @@ router.get('/', productsController.products);
 router.get('/crear', productsController.crear);
 router.post('/crear', productsController.crear);
 
-router.post('editar', productsController.editar)
+router.get('/editar/:id', productsController.editar)
+router.post('/editar/:id', productsController.editar)
 
 module.exports = router

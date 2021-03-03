@@ -1,30 +1,22 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>NaturalMystic - Product Detail</title>
-</head>
-<body>
+<%- include('./partials/head', {archivoCss: "crearEditarProductos"})%>
  
 <%- include('./partials/header.ejs')%>
 
 <hr>
+<div id="crearEditar-box">
+<div class="left">
+    <form action="/products/crear" method="POST">
+        <label for="">Producto</label>
+        <input type="text" name="producto" placeholder="Inserte nombre de producto..">
+        <label for="">Marca</label>
+        <input type="text" name="marca" placeholder="Inserte marca de producto..">
+        <label for="">Cantidad</label>
+        <input type="number" name="cantidad" placeholder="Inserte cantidad de producto/s..">
+        <button type="submit">Crear</button>
 
-<div class="crearEditar">
-<form action="/products/crear" method="POST">
-    <label for="">Producto</label>
-    <input type="text" name="producto" placeholder="Inserte nombre de producto..">
-    <label for="">Marca</label>
-    <input type="text" name="marca" placeholder="Inserte marca de producto..">
-    <label for="">Cantidad</label>
-    <input type="number" name="cantidad" placeholder="Inserte cantidad de producto/s..">
-    <button type="submit">Crear</button>
-
-</form>
+    </form>
+    </div>
 </div>
 
 <%- include('./partials/footer.ejs')%>
 
-</body>
