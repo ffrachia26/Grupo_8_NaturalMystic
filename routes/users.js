@@ -23,4 +23,4 @@ router.get('/register', usersController.register);
 router.post('/register', upload.any(), usersController.create)
 
 
-module.exports = 
+module.exports = router
