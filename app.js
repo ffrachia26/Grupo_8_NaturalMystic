@@ -3,6 +3,9 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 const methodOverride = require('method-override');
+const bcrypt = require('bcrypt')
+const multer = require('multer');
+var storage = multer.diskStorage
 
 //-----------RUTAS--------//
 
