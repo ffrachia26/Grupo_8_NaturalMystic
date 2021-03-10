@@ -5,14 +5,14 @@
     <div class="box">
       <h1>Register</h1>
 
-      <form action="" method="POST"> 
+      <form action="/users/crear" method="POST" enctype="multipart/form-data"> 
       
-      <input type="text" name="username" placeholder="Username" />
+      <input type="text" name="nombre" placeholder="Username" />
       <input type="text" name="email" placeholder="E-mail" />
       <input type="password" name="password" placeholder="Password" />
-      <input type="password" name="password2" placeholder="Retype password" />
+      <input type="file" name="avatar"  />
       
-      <input type="submit" name="signup_submit" value="Sign" />
+      <input type="submit" name="signup_submit" value="Register" />
     </form>
     </div>
   </div>
