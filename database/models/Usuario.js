@@ -1,5 +1,5 @@
-module.exports = (Sequelize, DataTypes) => {
-    let alias = "Usuarios";
+module.exports = (sequelize, DataTypes) => {
+    let alias = "Usuario";
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -7,22 +7,28 @@ module.exports = (Sequelize, DataTypes) => {
             notnull: true
         },
         nombre: {
-            type: DataTypes.VARCHAR(45)
+            type: DataTypes.STRING(45)
         },
         apellido: {
-            type: DataTypes.VARCHAR(45)
+            type: DataTypes.STRING(45)
         },
         email: {
-            type: DataTypes.VARCHAR(45)
+            type: DataTypes.STRING(45)
         },
         password: {
-            type: DataTypes.VARCHAR(65)
+            type: DataTypes.STRING(65)
         }
 
     };
     let config = {
-        timestamps: true
+        tablename: "usuarios",
+        timestamps: true,
+        paranoid: true,
+        underscored: true
+    
     };
 
     const Usuario = sequelize.define(alias, cols, config);
+
+    return Usuario
 }

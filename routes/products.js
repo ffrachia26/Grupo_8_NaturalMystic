@@ -5,7 +5,7 @@ let productsController = require('../controllers/productsController.js')
 
 router.get('/', productsController.products); 
 
-router.get('/crear', productsController.crear);
+router.get('/crear', productsController.creacion);
 router.post('/crear', productsController.crear);
 
 router.get('/editar/:id', productsController.editar)
