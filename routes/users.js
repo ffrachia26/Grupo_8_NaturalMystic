@@ -22,6 +22,8 @@ router.get('/login', usersController.login);
 router.get('/register', usersController.register); 
 router.post('/register', upload.any(), usersController.create)
 
+router.get('/registersuccess', usersController.registersuccess )
+
 
 module.exports = router
  

@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            notnull: true
+            autoIncrement: true
+            
         },
         nombre: {
             type: DataTypes.STRING(45)
@@ -22,9 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     };
     let config = {
         tablename: "usuarios",
-        timestamps: true,
-        paranoid: true,
-        underscored: true
+        timestamps: false,
+        
     
     };
 

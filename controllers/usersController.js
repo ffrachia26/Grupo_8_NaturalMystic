@@ -1,4 +1,5 @@
-
+let db = require('../database/models');
+let bcrypt = require('bcrypt');
 
 let usersController = 
 
@@ -13,16 +14,24 @@ let usersController =
      'register': function(req,res){
         res.render('register')           
     },
+
+
+
     'create' : function(req, res, next){
-        let usuario = {
+        db.Usuario.create({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 12),
+        })
+        .then(function(){
+            res.redirect('/users/registersuccess')
+        })
 
-        nombre: req.params.nombre,
-        email: req.params.email,
-        password: bcrypt.hashSync(req.params.password, 12),
-        avatar: req.files[0].filename
-          
-        }     
+    },
 
+    'registersuccess': function(req, res){
+        res.render('registersuccess')
     }
 }
 
