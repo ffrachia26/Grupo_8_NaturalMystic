@@ -8,18 +8,18 @@ module.exports = (sequelize, DataTypes) => {
             
         },
         nombre: {
-            type: DataTypes.STRING(45)
+            type: DataTypes.STRING
         },
         apellido: {
-            type: DataTypes.STRING(45)
+            type: DataTypes.STRING
         },
         email: {
-            type: DataTypes.STRING(45)
+            type: DataTypes.STRING
         },
         password: {
-            type: DataTypes.STRING(65)
-        }
-
+            type: DataTypes.STRING
+        },
+        id_imagen: DataTypes.INTEGER
     };
     let config = {
         tablename: "usuarios",
@@ -29,6 +29,12 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Usuario = sequelize.define(alias, cols, config);
+
+    Usuario.associate = function(models){
+        Usuario.hasOne(models.Image, {
+            foreignKey: 'id_imagen'
+        })
+    }
 
     return Usuario
 }

@@ -3,12 +3,23 @@
   <hr>
   <div id="login-box">
     <div class="box">
-      <h1>¡Registro exitoso!</h1>
+      <%  for(let i = 0; i < notas.length; i++) {   %>
+      <h1>Editar usuario</h1>
 
+      <form action="/users/register" method="POST" enctype="multipart/form-data"> 
       
+      <input type="text" name="nombre" value="<%=Usuario[i].nombre%>" />
+      <input type="text" name="apellido" value="<%=Usuario[i].apellido%>" />
+      <input type="text" name="email" value="<%=Usuario[i].email%>" />
+      <input type="password" name="password" value="<%=Usuario[i].password%>" />
+      <input type="file" name="avatar" value="<%=Images[i].path%>" />
+      
+      <input type="submit" name="signup_submit" value="Edit" />
+      <button
+    </form>
     </div>
   </div>
+  <%  } %>
+    
+    <%- include('./partials/footer.ejs')%>
 
-
-
-  <%- include('./partials/footer.ejs')%>

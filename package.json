@@ -4,6 +4,7 @@
   "description": "1) Link del repositorio grupal:\r     https://github.com/ffrachia26/Grupo_8_NaturalMystic",
   "main": "app.js",
   "scripts": {
+    "start": "node .app/.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

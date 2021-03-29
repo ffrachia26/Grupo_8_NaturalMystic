@@ -26,10 +26,12 @@ app.use('/users', rutaUsers)
 
 //------------SETTINGS------------//
 
-app.listen(3000, function(){
-    console.log('El server esta corriendo en el puerto 3000');
-    console.log('http://localhost:3000')
-});
+//---app.listen(3000, function(){
+   //- console.log('El server esta corriendo en el puerto 3000');
+    //-console.log('http://localhost:3000')
+//-})
+
+let port = process.env.PORT || 3000
 
     app.set('view engine', 'ejs')
 
@@ -44,7 +46,7 @@ app.listen(3000, function(){
     app.use(methodOverride('_method'));
 
 
-
+app.listen(port, () => console.log('Server listening to port: ${port}'))
 
     
 

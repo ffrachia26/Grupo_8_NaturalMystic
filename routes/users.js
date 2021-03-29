@@ -24,6 +24,9 @@ router.post('/register', upload.any(), usersController.create)
 
 router.get('/registersuccess', usersController.registersuccess )
 
+//-------------Delete-------------//
+router.post('/delete/:id', usersController.delete)
+
 
 module.exports = router
  
