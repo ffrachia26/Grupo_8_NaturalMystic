@@ -377,12 +377,17 @@ footer div.derechos p{
     }
 
     header .containerlogo{
-        width: 40%;
+        width: 25%;
         margin: -7px;
+        padding-top: 10px;
     }
 
     header .containersearch{
         width: 50%;
+    }
+
+    .loginRegister {
+        padding: 10px;
     }
 
     .menuNoResposive{
