@@ -1,5 +1,5 @@
 let db = require('../database/models');
-let bcrypt = require('bcrypt');
+let bcrypt = require('bcryptjs');
 
 let usersController = 
 
