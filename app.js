@@ -3,7 +3,7 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 const methodOverride = require('method-override');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const multer = require('multer')
 
 //-----------RUTAS--------//
@@ -15,13 +15,6 @@ const rutaUsers = require('./routes/users');
 const { use } = require('./routes/home');
 const { urlencoded } = require('express');
 
-app.use('/', rutaHome);
-
-app.use('/products', rutaProducts);
-
-app.use('/purchase', rutaPurchase)
-
-app.use('/users', rutaUsers)
 
 
 //------------SETTINGS------------//
@@ -44,6 +37,15 @@ let port = process.env.PORT || 3000
     app.use(express.json());
 
     app.use(methodOverride('_method'));
+
+    app.use('/', rutaHome);
+
+    app.use('/products', rutaProducts);
+
+    app.use('/purchase', rutaPurchase)
+
+    app.use('/users', rutaUsers)
+
 
 
 app.listen(port, () => console.log('Server listening to port: ${port}'))

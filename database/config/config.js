@@ -1,9 +1,11 @@
+require('dotenv').config()
+
 module.exports = {
   "production": {
-    "username": "ffrachia26",
-    "password": "Pachu268",
-    "database": "ffrachia26_naturalmystic",
-    "host": "mysql-ffrachia26.alwaysdata.net",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOST,
     "dialect": "mysql"
   },
   "test": {
