@@ -1,10 +1,22 @@
 <%- include('./partials/head', {archivoCss: "register"})%>
   <%- include('./partials/header.ejs')%>
   <hr>
+
+
+  <% if (typeof errors != 'undefined') { %>
+    <p style="color: red;"> ERROR</p>
+    <ul>
+      <% for (let i = 0 ; i < errors.length; i++) { %>
+        <li>
+          <%= errors[i].msg %>
+        </li>
+     <% } %>   
+    </ul>
+  <% } %>  
   <div id="login-box">
     <div class="box">
       <h1>Register</h1>
-
+      
       <form action="/users/register" method="POST" enctype="multipart/form-data"> 
       
       <input type="text" name="nombre" placeholder="Nombre" />

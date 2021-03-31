@@ -10,12 +10,13 @@ let productsController = {
     'creacion' : function(req,res){
         res.render('crearProductos')
     },
-    'crear': function(req, res){
+    'crear': function(req, res, next){
         db.Producto.create({
             nombre: req.body.nombre,
             marca: req.body.marca,
             descripcion: req.body.descripcion,
-            categoria: req.body.categoria
+            categoria: req.body.categoria,
+            imagen: req.files[0].filename
         })
         .then(function(){
             res.redirect('/products/crear')

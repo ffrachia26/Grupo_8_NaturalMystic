@@ -1,5 +1,6 @@
 let db = require('../database/models');
 let bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 let usersController = 
 
@@ -18,7 +19,10 @@ let usersController =
 
 
     'create' : function(req, res){
-        db.Image.create({
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+    
+            db.Image.create({
             path: req.files[0].filename
         }) .then((data) => {
             db.Usuario.create({
@@ -31,8 +35,10 @@ let usersController =
                 return res.render('registersuccess', {user})
             }).catch((error) => console.log(error))
         }).catch((error) => console.log(error))
-    },
-
+    } else {
+        return res.render('register', {errors: errors.errors});
+    }
+},
     'registersuccess': function(req, res){
         res.render('registersuccess')
     },
