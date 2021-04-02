@@ -9,6 +9,32 @@ let usersController =
     'login': function(req,res){
         res.render('login')           
      },
+     'processLogin': function(req, res){
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let usuarioALoguearse
+            db.usuario.findAll()
+            .then(function(users){
+                for (let i = 0; i < users.length; i++){
+                    if (users[i].email == req.body.email){
+                        if (bcrypt.compareSync(req.body.password, users[i].password)){
+                            let usuarioALoguearse = users[i];
+                            break
+                        }
+                    }
+                }
+                if (usuarioALoguearse == undefined) {
+                    return res.render('login', {errors: [
+                        {msg: 'Credenciales invalidas'}
+                    ]});
+                } 
+                req.session.usuarioLogueado = usuarioALoguearse
+                res.redirect('loginsuccess')
+            })
+        } else {
+            return res.render('index', {errors: errors.errors});
+        }
+     },
 
      //------------Register------------//
 

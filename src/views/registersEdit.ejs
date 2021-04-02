@@ -1,0 +1,26 @@
+<%- include('./partials/head', {archivoCss: "register"})%>
+  <%- include('./partials/header.ejs')%>
+  <hr>
+  <%  for(let i = 0; i < usuario.length; i++) {   %>
+  <div id="login-box">
+    <div class="box">
+      
+      <h1>Editar usuario</h1>
+
+      <form action="/users/register" method="POST" enctype="multipart/form-data"> 
+      
+      <input type="text" name="nombre" value="<%=usuarios[i].nombre%>" />
+      <input type="text" name="apellido" value="<%=usuarios[i].apellido%>" />
+      <input type="text" name="email" value="<%=usuarios[i].email%>" />
+      <input type="password" name="password" value="<%=usuarios[i].password%>" />
+      <input type="file" name="avatar" value="<%=images[i].path%>" />
+      
+      <input type="submit" name="signup_submit" value="Edit" />
+      <button
+    </form>
+    </div>
+  </div>
+  <%  } %>
+    
+    <%- include('./partials/footer.ejs')%>
+
