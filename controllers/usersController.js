@@ -13,15 +13,15 @@ let usersController =
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let usuarioALoguearse
-            db.usuario.findAll()
+            db.Usuario.findAll()
             .then(function(users){
                 for (let i = 0; i < users.length; i++){
                     if (users[i].email == req.body.email){
                         if (bcrypt.compareSync(req.body.password, users[i].password)){
                             let usuarioALoguearse = users[i];
-                            break
+                            
                         }
-                    }
+                    } req.session.usuarioLogueado = usuarioALoguearse
                 }
                 if (usuarioALoguearse == undefined) {
                     return res.render('login', {errors: [

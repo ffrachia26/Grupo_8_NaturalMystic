@@ -27,6 +27,13 @@ const { urlencoded } = require('express');
 
 let port = process.env.PORT || 3000
 
+app.use(session({         //Usuage
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+  }));
+
     app.set('view engine', 'ejs')
 
     app.set('views', './src/views')
@@ -47,7 +54,7 @@ let port = process.env.PORT || 3000
 
     app.use('/users', rutaUsers)
 
-    app.use(session({secret: ''}));
+   
 
 app.listen(port, () => console.log('Server listening to port: ${port}'))
 

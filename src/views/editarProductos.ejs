@@ -6,16 +6,16 @@
 
 <div id= "crearEditar-box">
     <div class="crearEditar">
-    <form action="/products/editar/<%=Producto.id%>" method="POST">
+    <form action="/products/editar/<%=producto.id%>" method="POST">
         <label for="">Producto</label>
-        <input type="text" name="nombre" placeholder="<%=producto.nombre%>">
+        <input type="text" name="nombre" placeholder="<%producto.nombre%>">
         <label for="">Marca</label>
         <input type="text" name="marca" placeholder="<%=producto.marca%>">
         <label for="">Cantidad</label>
         <input type="number" name="descripcion" placeholder="<%=producto.descripcion%>">
         <label for="">Categoria</label>
         <input type="number" name="Categoria" placeholder="<%=producto.categoria%>">
-        <button type="submit">Crear</button>
+        <button type="submit">Editar</button>
     </form>
 
     </div>

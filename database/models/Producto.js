@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         descripcion: {
             type: DataTypes.STRING(45)
         },
-        categoria: {
-            type: DataTypes.STRING(45)
+        id_imagen: {
+            type: DataTypes.INTEGER
         }
     };
     let config = {
@@ -26,6 +26,12 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Producto = sequelize.define(alias, cols, config);
+
+    Producto.associate = function(models){
+        Producto.hasOne(models.Image, {
+            foreignKey: 'id_imagen_id'
+        })
+    }
 
     return Producto
 }

@@ -7,7 +7,7 @@ let authMiddleware = require('../middlewares/authMiddleware.')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'public/img/users')
+      cb(null, 'public/img/products')
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
@@ -18,10 +18,10 @@ var storage = multer.diskStorage({
 
 router.get('/', productsController.products); 
 
-router.get('/crear', authMiddleware, productsController.creacion);
-router.post('/crear', authMiddleware,productsController.crear);
+router.get('/crear',  productsController.crear);
+router.post('/crear', productsController.creacion);
 
-router.get('/editar/:id', authMiddleware,productsController.editar)
-router.post('/editar/:id', authMiddleware, productsController.editar)
+router.get('/editar/:id', productsController.editar)
+router.post('/editar/:id',  productsController.update)
 
 module.exports = router
