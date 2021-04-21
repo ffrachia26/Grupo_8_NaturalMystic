@@ -56,6 +56,7 @@ let usersController =
                 apellido: req.body.apellido,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 12),
+                avatar: data.path,
                 id_imagen: data.id
             }).then((user) => {
                 return res.render('registersuccess', {user})

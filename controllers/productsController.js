@@ -2,7 +2,9 @@ let db = require('../database/models')
 
 let productsController = {
     'products': function(req,res){
-        db.Producto.findAll()
+        db.Producto.findAll({
+            include: db.imageproductos
+        })
         .then(function(productos){
             return res.render('listaProducts', {productos: productos})
         })             
@@ -28,16 +30,18 @@ let productsController = {
         res.render('crearProductos')
     },
     'creacion': function(req, res, next){
-        db.Image.create({
+        db.Imageproducto.create({
             path: req.files[0].filename
         }) .then((data) => {
             db.Producto.create({
                 nombre: req.body.nombre,
                 marca: req.body.marca,
-                descripcion: req.body.email,
-                id_imagen: data.id
-            }).then((productoCreado) => {
-                return res.render('listaProducts', {productoCreado})
+                descripcion: req.body.descripcion,
+                categoria: req.body.categoria,
+                avatar: data.path,
+                id_imagen_id: data.id
+            }).then((productos) => {
+                return res.redirect('/products')
             }).catch((error) => console.log(error))
         }).catch((error) => console.log(error))
     },

@@ -20,7 +20,12 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: DataTypes.STRING
         },
-        id_imagen: DataTypes.INTEGER
+        id_imagen: {
+            type: DataTypes.INTEGER
+        },
+        avatar: {
+            type:DataTypes.STRING
+        }
     };
     let config = {
         tablename: "usuarios",
@@ -32,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = function(models){
-        Usuario.hasOne(models.Image, {
+        Usuario.belongsTo(models.Image, {
             foreignKey: 'id_imagen'
         })
     }

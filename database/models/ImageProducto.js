@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Image";
+    let alias = "Imageproducto";
     let cols = {
         id: {
             type: DataTypes.INTEGER,
@@ -11,19 +11,21 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     let config = {
-        tablename: "images",
+        tablename: "imageproductos",
         timestamps: false
         
     };
 
-    const Image = sequelize.define(alias, cols, config);
+    const Imageproducto = sequelize.define(alias, cols, config);
 
-    Image.associate = function(models) {
-        Image.hasOne(models.Usuario, {
-        foreignKey: 'id_imagen'
+
+
+    Imageproducto.associate = function(models) {
+        Imageproducto.hasOne(models.Producto, {
+        foreignKey: 'id_imagen_id'
         })
-    };    
+    };
+    
 
-    return Image
+    return Imageproducto
 }
-

@@ -3,22 +3,16 @@
 <%- include('./partials/header.ejs')%>
 
 <hr>
-<% for (let i = 0; i < productos.legnth; i++) {  %>
-<div id= "crearEditar-box">
-    <div class="crearEditar">
-    <form action="/products/editar/<%=Producto.id%>" method="POST">
-        <label for="">Producto</label>
-        <input type="text" name="nombre" placeholder="<%=producto.nombre%>">
-        <label for="">Marca</label>
-        <input type="text" name="marca" placeholder="<%=producto.marca%>">
-        <label for="">Cantidad</label>
-        <input type="number" name="descripcion" placeholder="<%=producto.descripcion%>">
-        <label for="">Categoria</label>
-        <input type="number" name="Categoria" placeholder="<%=producto.categoria%>">
-        <button type="submit">Editar</button>
-    </form>
-
-    </div>
+<h1 class="encabezado"><strong>Productos</strong></h1>
+<div class="container-products">
+<% for (let i = 0; i < productos.length; i++) {  %>
+<div class= "lista-products">
+        <img src="/img/products/<%=productos[i].avatar%>" alt="Imagen de producto">
+        <h1><strong><%=productos[i].nombre%></strong></h1>
+        <h2><%=productos[i].marca%></h2>
+        
+        
 </div>
 <%  }  %>
+</div>
 <%- include('./partials/footer.ejs')%>

@@ -3,7 +3,9 @@ var router = express.Router();
 let productsController = require('../controllers/productsController.js')
 let multer = require('multer')
 let guestMiddleware = require('../middlewares/guestMiddleware')
-let authMiddleware = require('../middlewares/authMiddleware.')
+let authMiddleware = require('../middlewares/authMiddleware.');
+let db = require('../database/models');
+let path = require('path');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -19,7 +21,7 @@ var storage = multer.diskStorage({
 router.get('/', productsController.products); 
 
 router.get('/crear',  productsController.crear);
-router.post('/crear', productsController.creacion);
+router.post('/crear', upload.any(), productsController.creacion);
 
 router.get('/editar/:id', productsController.editar)
 router.post('/editar/:id',  productsController.update)
