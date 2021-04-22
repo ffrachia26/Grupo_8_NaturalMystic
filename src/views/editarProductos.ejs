@@ -9,13 +9,13 @@
     <form action="/products/editar/<%=productos.id%>" method="POST">
         <img class="imgEditar" src="/img/products/<%=productos.avatar%>" alt="Imagen de producto">
         <label for="">Producto</label>
-        <input type="text" name="nombre" placeholder="<%=productos.nombre%>">
+        <input type="text" name="nombre" value="<%=productos.nombre%>">
         <label for="">Marca</label>
-        <input type="text" name="marca" placeholder="<%=productos.marca%>">
+        <input type="text" name="marca" value="<%=productos.marca%>">
         <label for="">Cantidad</label>
-        <input type="text" name="descripcion" placeholder="<%=productos.descripcion%>">
+        <input type="text" name="descripcion" value="<%=productos.descripcion%>">
         <label for="">Categoria</label>
-        <input type="text" name="Categoria" placeholder="<%=productos.categoria%>">
+        <input type="text" name="Categoria" value="<%=productos.categoria%>">
         <input type="file" name="avatar"  />
         <button type="submit">Editar</button>
     </form>

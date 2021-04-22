@@ -58,7 +58,7 @@ let productsController = {
             include: db.imageproductos
         })
         .then(function(productos){
-            return res.render('listaEditarProductos', {productos: productos})
+            return res.render('listaEditarEliminarProductos', {productos: productos})
         })             
     },
     'viewUpdateProduct': function(req, res){
@@ -66,6 +66,16 @@ let productsController = {
         .then(function(productos){
             return res.render('EditarProductos', {productos: productos})
         }) 
+    },
+    'delete': function(req,res){
+        db.Producto.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(){
+              res.redirect('/products/editar')
+          })
     }
 }
 

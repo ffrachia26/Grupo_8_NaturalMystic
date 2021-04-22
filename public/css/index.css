@@ -180,8 +180,8 @@ section.home hr{
 
 .destacados {
     text-align: center;
-    color: rgb(0, 0, 0);
-}
+    color: #206200;
+    }
 
 /*------------PRODUCTOS------------*/
 
@@ -422,9 +422,13 @@ footer div.derechos p{
     
  /*------------IMAGEN--------*/
 .imagenespasando img {
-    width: 100%;
+    transition: 0.2s ease;
+    width: 90%;
     border-radius: 2%;
     height: 285px;
+}
+.imagenespasando img {
+    width: 100%;
 }
 
 /*------------DESTACADOS----------*/
@@ -656,10 +660,15 @@ div.banners {
     margin: 10px 100px;
 }
 
+
 .imagenespasando img {
-    width: 100%;
+    transition: 0.2s ease;
+    width: 90%;
     border-radius: 2%;
     height: 285px;
+}
+.imagenespasando img {
+    width: 100%;
 }
 
 /*------------DESTACADOS----------*/
@@ -667,7 +676,7 @@ div.banners {
 .destacados {
     margin: 15px auto;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: #206200;
 }
 
 /*------------PRODUCTOS------------*/

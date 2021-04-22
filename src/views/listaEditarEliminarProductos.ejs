@@ -6,14 +6,14 @@
 <h1 class="encabezado"><strong>Productos</strong></h1>
 <div class="container-products">
 <% for (let i = 0; i < productos.length; i++) {  %>
-<div class= "lista-products">
+<div class= "lista-products-edit-eliminar">
     <form action="/products/editar/<%=productos[i].id%>">
         <img src="/img/products/<%=productos[i].avatar%>" alt="Imagen de producto">
         <h1><strong><%=productos[i].nombre%></strong></h1>
         <h2><%=productos[i].marca%></h2>
         <button>Editar</button>
     </form>
-        <form action="/products/delete/<%=productos[i].id%>">
+        <form action="/products/delete/<%=productos[i].id%>" method="POST">
             <button>Eliminar</button>
         </form>
         

@@ -34,6 +34,10 @@ router.post('/register', upload.any(), [
 
 router.get('/registersuccess', usersController.registersuccess )
 
+//-------------Update-------------//
+
+router.get('/update', usersController.updateProfile)
+
 //-------------Delete-------------//
 router.post('/delete/:id', usersController.delete)
 

@@ -28,8 +28,11 @@ header .containerlogo{
 }
 
 header .logo{
-    width: 60%;
-}
+    transition: 0.2s ease; 
+    width: 60%;   
+    };
+
+
 
 header .containersearch{
     width: 100%;
@@ -480,3 +483,16 @@ footer div.derechos p{
 
 
 }
+
+ul li a {
+    transition: 0.2s ease;
+    font-size: 11px;
+}
+
+ul li a:hover {
+    font-size: 15px;
+}
+
+header .logo:hover{
+    width: 66%;   
+    };

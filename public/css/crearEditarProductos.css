@@ -89,11 +89,35 @@ body {
     margin: 20px;
     margin-top: 40px;
     width: 20%;
-    height: 364px;
+    height: 344px;
     background: #FFF;
     border-radius: 32px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   }
+  
+  .lista-products-edit-eliminar {
+    padding: 12;
+    margin: 20px;
+    margin-top: 40px;
+    width: 20%;
+    height: 364px;
+    background: #FFF;
+    border-radius: 32px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+  }
+
+  .lista-products-edit-eliminar h1 {
+    font-size: initial;
+    color: green ;
+  }
+
+  .lista-products-edit-eliminar h2 {
+    font-size: 13;
+  }
+
+  .lista-products-edit-eliminar:hover {
+    border: solid;
+}
 
   .lista-products h1 {
     font-size: initial;
