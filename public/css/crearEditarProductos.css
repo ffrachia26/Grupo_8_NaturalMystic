@@ -67,8 +67,9 @@ body {
 
   form button {
     margin: 20px;
-    margin-top: 50px;
-  }
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
 
   .container-products{
     display: flex;
@@ -88,9 +89,9 @@ body {
     margin: 20px;
     margin-top: 40px;
     width: 20%;
-    height: 300px;
+    height: 364px;
     background: #FFF;
-    border-radius: 2px;
+    border-radius: 32px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   }
 
@@ -102,6 +103,10 @@ body {
   .lista-products h2 {
     font-size: 13;
   }
+
+  .lista-products:hover {
+    border: solid;
+}
 
   .encabezado {
     margin-top: 3%;
@@ -122,4 +127,13 @@ body {
 
   img {
     width: 100%
+  }
+
+  button {
+    margin-top: 8px;
+    border-radius: 42px;
+  }
+
+  .imgEditar {
+    display: none;
   }

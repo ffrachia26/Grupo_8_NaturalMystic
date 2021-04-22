@@ -414,7 +414,12 @@ footer div.derechos p{
     .menuNoResposive ul li a{
         text-decoration: none;
         color: black;
-    }
+       }
+
+       .menuNoResposive ul li a:hover{
+        text-decoration: none;
+        color: #46ce02;
+       }
 
     section.home{
         display: flex;

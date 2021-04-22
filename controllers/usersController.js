@@ -78,6 +78,26 @@ let usersController =
         }).then(function(){
             res.redirect('/')
         })
+    },
+
+    'updateProfile': function(req, res) {
+        db.Usuario.findByPk(req.params.id)
+        .then((user) => {
+            db.Usuario.update({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 12),
+                avatar: req.files[0].filename,
+            },{
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(()=> {
+                return res.redirect()
+            })
+        })
     }
 
 }

@@ -23,7 +23,8 @@ router.get('/', productsController.products);
 router.get('/crear',  productsController.crear);
 router.post('/crear', upload.any(), productsController.creacion);
 
-router.get('/editar/:id', productsController.editar)
-router.post('/editar/:id',  productsController.update)
+router.get('/editar', productsController.editar)
+router.get('/editar/:id',  productsController.viewUpdateProduct)
+router.post('/editar/:id',  productsController.updateProduct)
 
 module.exports = router

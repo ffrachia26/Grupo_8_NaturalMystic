@@ -7,11 +7,15 @@
 <div class="container-products">
 <% for (let i = 0; i < productos.length; i++) {  %>
 <div class= "lista-products">
+    <form action="/products/editar/<%=productos[i].id%>">
         <img src="/img/products/<%=productos[i].avatar%>" alt="Imagen de producto">
         <h1><strong><%=productos[i].nombre%></strong></h1>
         <h2><%=productos[i].marca%></h2>
-        <button>   Agregar al carrito   </button>
-        
+        <button>Editar</button>
+    </form>
+        <form action="/products/delete/<%=productos[i].id%>">
+            <button>Eliminar</button>
+        </form>
         
 </div>
 <%  }  %>

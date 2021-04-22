@@ -1,4 +1,5 @@
 let db = require('../database/models')
+const usersController = require('./usersController')
 
 let productsController = {
     'products': function(req,res){
@@ -10,18 +11,23 @@ let productsController = {
         })             
     },
 
-    'update': function(req, res) {
-        db.Producto.update({
-            nombre: req.body.nombre,
+    'updateProduct': function(req, res) {
+        db.Producto.findByPk(req.params.id)
+        .then((producto) => {
+            db.Producto.update({
+                nombre: req.body.nombre,
                 marca: req.body.marca,
-                descripcion: req.body.email,
-                id_imagen: data.id
-        },{
-            where: {
-                id: req.params.id
-            }
-        }).then(function(){
-            res.render('listaProducts')
+                descripcion: req.body.descripcion,
+                categoria: req.body.categoria,
+                avatar: req.files[0].filename 
+            },{
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(()=> {
+                return res.redirect('/products/editar')
+            })
         })
     },
 
@@ -47,8 +53,19 @@ let productsController = {
     },
     
 
-    'editar' : function(req, res){
-        res.render('editarProductos')
+    'editar' : function(req,res){
+        db.Producto.findAll({
+            include: db.imageproductos
+        })
+        .then(function(productos){
+            return res.render('listaEditarProductos', {productos: productos})
+        })             
+    },
+    'viewUpdateProduct': function(req, res){
+        db.Producto.findByPk(req.params.id)
+        .then(function(productos){
+            return res.render('EditarProductos', {productos: productos})
+        }) 
     }
 }
 
