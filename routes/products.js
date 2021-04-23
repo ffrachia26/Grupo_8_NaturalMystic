@@ -30,7 +30,7 @@ router.post('/crear', upload.any(), productsController.creacion);
 
 router.get('/editar', productsController.editar)
 router.get('/editar/:id',  productsController.viewUpdateProduct)
-router.post('/editar/:id',  productsController.updateProduct)
+router.post('/editar/:id', upload.any(), productsController.updateProduct)
 
 router.post('/delete/:id', productsController.delete)
 

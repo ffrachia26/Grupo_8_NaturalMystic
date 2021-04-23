@@ -239,7 +239,7 @@ div.productos div {
     justify-content: center;
  }*/
 
- .mediosPago{}
+ 
 
 .mediosPago p {
     font-size: 28px;
@@ -677,6 +677,84 @@ div.banners {
     margin: 15px auto;
     text-align: center;
     color: #206200;
+}
+
+.container-products{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 9%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    
+  }
+
+  .lista-products {
+    padding: 12;
+    margin: 20px;
+    margin-top: 40px;
+    width: 20%;
+    height: 354px;
+    background: #FFF;
+    border-radius: 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .lista-products h1 {
+    font-size: initial;
+    color: green;
+  }
+
+  .lista-products h2 {
+    font-size: 13;
+  }
+
+  .lista-products:hover {
+    border: solid;
+    border-color: rgb(255, 54, 54);
+}
+
+img {
+    width: 100%
+  }
+
+  button {
+    margin-top: 8px;
+    border-radius: 42px;
+  }
+
+  
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+form label {
+  margin: 20px;
+}
+
+form label input {
+  display: flex;
+  margin: 10px;
+  padding: 15%;
+}
+
+form button {
+  margin: 20px;
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+.inputAvatar{
+  margin-top: 30px;
+}
+
+.botonEdit{
+  margin-top: 30px;
 }
 
 /*------------PRODUCTOS------------*/

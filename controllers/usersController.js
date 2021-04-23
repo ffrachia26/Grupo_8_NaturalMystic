@@ -4,7 +4,17 @@ const { validationResult } = require('express-validator');
 
 let usersController = 
 
-{
+{   
+    'list': function(req, res){
+        db.Usuario.findAll(
+            {
+                include: db.Image
+            }
+        )
+        .then(function(usuarios){
+            return res.render('listaUsers', {usuarios: usuarios})
+        })
+    },
     //------------Login------------//
     'login': function(req,res){
         res.render('login')           

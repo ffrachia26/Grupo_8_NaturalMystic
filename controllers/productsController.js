@@ -21,6 +21,7 @@ let productsController = {
                 categoria: req.body.categoria,
                 precio: req.body.precio,
                 avatar: req.files[0].filename 
+                
             },{
                 where: {
                     id: req.params.id
@@ -80,6 +81,7 @@ let productsController = {
             }
         })
         .then(function(){
+            
               res.redirect('/products/editar')
           })
     },

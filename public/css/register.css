@@ -20,7 +20,25 @@ body {
   border-radius: 32px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+#registerBigBox {
+  position: relative;
+  margin: 5% auto;
+  width: 28%;
+  height: 64%;
+  background: #FFF;
+  border-radius: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
 
+#registerSucces {
+  position: relative;
+  margin: 5% auto;
+  width: 600px;
+  height: 18%;
+  background: #FFF;
+  border-radius: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
 .box {
   position: relative;
   margin: 5% auto;
@@ -33,6 +51,18 @@ body {
   border-radius: 32px;
 }
 
+.registerBox {
+  position: relative;
+  margin: 5% auto;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 19px;
+  padding-left: 0;
+  width: 300px;
+  height: 400px;
+  border-radius: 32px;
+}
 h1 {
   margin: 0 0 20px 0;
   font-weight: 300;

@@ -31,6 +31,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   }
 
+  #box-quienes-somos{
+    position: relative;
+    margin: 5% auto;
+    width: 50%;
+    height: 55%;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
   .quienesSomos {
     padding: 25px
   }
@@ -123,6 +133,7 @@ body {
 
   .lista-products-edit-eliminar:hover {
     border: solid;
+    border-color: #206200;
 }
 
   .lista-products h1 {
@@ -136,6 +147,7 @@ body {
 
   .lista-products:hover {
     border: solid;
+    border-color: #206200;
 }
 
   .encabezado {

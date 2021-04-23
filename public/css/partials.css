@@ -465,7 +465,8 @@ footer div.derechos p{
 
     footer div.menuFooter{
         width: 30%;
-        margin: 0px;
+        margin-top: 15px;
+    height: 50px;
         order: -2;
         padding-left: 20px;
     }

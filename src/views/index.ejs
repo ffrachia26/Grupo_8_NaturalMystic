@@ -36,13 +36,20 @@
         
         <hr>
         <!--------- Productos -------->
-        <div class="productos">
-            <div>PRODUCTO</div>
-            <div>PRODUCTO</div>
-            <div>PRODUCTO</div>
-            <div>PRODUCTO</div> 
-            <div>PRODUCTO</div> 
-        </div>
+        <div class="container-products">
+            <% for (let i = 0; i < productos.length; i++) {  %>
+            <div class= "lista-products">
+                    <img class="imgIndex" src="/img/products/<%=productos[i].avatar%>" alt="Imagen de producto">
+                    <h1><strong><%=productos[i].nombre%></strong></h1>
+                    <h2><%=productos[i].marca%></h2>
+                    <h3 style="color: rgb(104, 104, 104);"><i>$170</i></h3>
+                    <h4 style="color: rgb(255, 54, 54); background-color: silver; text-align: center;"  ><i>25% OFF</i></h4>
+                    <button>   Agregar al carrito   </button>
+                    
+                    
+            </div>
+            <%  }  %>
+            </div>
         <hr>
         <!--------- Banners -------->
         <div class="banners">

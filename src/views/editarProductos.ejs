@@ -6,7 +6,7 @@
 
 <div id= "crearEditar-box">
     <div class="crearEditar">
-    <form action="/products/editar/<%=productos.id%>" method="POST">
+    <form action="/products/editar/<%=productos.id%>" method="POST" enctype="multipart/form-data" >
         <img class="imgEditar" src="/img/products/<%=productos.avatar%>" alt="Imagen de producto">
         <label for="">Producto</label>
         <input type="text" name="nombre" value="<%=productos.nombre%>">
