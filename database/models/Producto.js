@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
         categoria: {
             type: DataTypes.STRING(45)
         },
+        precio: {
+            type: DataTypes.DOUBLE
+        },
         id_imagen_id: {
             type: DataTypes.INTEGER
         },

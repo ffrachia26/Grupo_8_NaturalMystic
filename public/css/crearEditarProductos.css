@@ -24,8 +24,8 @@ body {
   #crearEditar-box {
     position: relative;
     margin: 5% auto;
-    width: 600px;
-    height: 400px;
+    width: 50%;
+    height: 85%;
     background: #FFF;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -70,7 +70,13 @@ body {
     margin-top: 4px;
     margin-bottom: 3px;
 }
+  .inputAvatar{
+    margin-top: 30px;
+  }
 
+  .botonEdit{
+    margin-top: 30px;
+  }
   .container-products{
     display: flex;
     flex-direction: row;
@@ -89,7 +95,7 @@ body {
     margin: 20px;
     margin-top: 40px;
     width: 20%;
-    height: 344px;
+    height: 354px;
     background: #FFF;
     border-radius: 32px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);

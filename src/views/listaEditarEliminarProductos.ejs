@@ -11,6 +11,7 @@
         <img src="/img/products/<%=productos[i].avatar%>" alt="Imagen de producto">
         <h1><strong><%=productos[i].nombre%></strong></h1>
         <h2><%=productos[i].marca%></h2>
+        <h3><%=productos.precio%></h3>
         <button>Editar</button>
     </form>
         <form action="/products/delete/<%=productos[i].id%>" method="POST">

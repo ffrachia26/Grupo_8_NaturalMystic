@@ -19,6 +19,7 @@ let productsController = {
                 marca: req.body.marca,
                 descripcion: req.body.descripcion,
                 categoria: req.body.categoria,
+                precio: req.body.precio,
                 avatar: req.files[0].filename 
             },{
                 where: {
@@ -30,7 +31,7 @@ let productsController = {
             })
         })
     },
-
+    //---------------Create-------------//
 
     'crear' : function(req,res){
         res.render('crearProductos')
@@ -44,6 +45,7 @@ let productsController = {
                 marca: req.body.marca,
                 descripcion: req.body.descripcion,
                 categoria: req.body.categoria,
+                precio: req.body.precio,
                 avatar: data.path,
                 id_imagen_id: data.id
             }).then((productos) => {
@@ -52,6 +54,7 @@ let productsController = {
         }).catch((error) => console.log(error))
     },
     
+    //---------------Editar-------------//
 
     'editar' : function(req,res){
         db.Producto.findAll({
@@ -67,6 +70,9 @@ let productsController = {
             return res.render('EditarProductos', {productos: productos})
         }) 
     },
+
+    //---------------Delete-------------//
+
     'delete': function(req,res){
         db.Producto.destroy({
             where: {
@@ -76,7 +82,61 @@ let productsController = {
         .then(function(){
               res.redirect('/products/editar')
           })
-    }
+    },
+
+    //---------------CATEGORIAS-------------//
+
+    'medallones': function(req, res){
+        db.Producto.findAll({
+            where: {
+                categoria: 'Medallones'
+            }
+        })
+        .then(function(medallones){
+            res.render('medallones', {medallones: medallones})
+        })
+    },
+
+    'dulce': function(req, res){
+        db.Producto.findAll({
+            where: {
+                categoria: 'Dulce'
+            }
+        })
+        .then(function(dulce){
+            res.render('dulce', {dulce: dulce})
+        })
+    },
+    'quesos': function(req, res){
+        db.Producto.findAll({
+            where: {
+                categoria: 'Quesos'
+            }
+        })
+        .then(function(quesos){
+            res.render('quesos', {quesos: quesos})
+        })
+    },
+    'otros': function(req, res){
+        db.Producto.findAll({
+            where: {
+                categoria: 'Otros'
+            }
+        })
+        .then(function(otros){
+            res.render('otros', {otros: otros})
+        })
+    },
+    'hogar': function(req, res){
+        db.Producto.findAll({
+            where: {
+                categoria: 'Hogar'
+            }
+        })
+        .then(function(hogar){
+            res.render('hogar', {hogar: hogar})
+        })
+    },
 }
 
 module.exports = productsController
