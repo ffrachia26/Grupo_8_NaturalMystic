@@ -6,12 +6,12 @@
 <h1 class="encabezado"><strong>Usuarios</strong></h1>
 <div class="container-products">
 <% for (let i = 0; i < usuarios.length; i++) {  %>
-<div class= "lista-products">
+<div class= "login-list">
         <img src="/img/users/<%=usuarios[i].avatar%>" alt="Imagen de usuario">
         <h1><strong><%=usuarios[i].nombre%> <%=usuarios[i].apellido%></strong></h1>
         <h2><%=usuarios[i].email%></h2>
         
-        <button>   Editar   </button>
+        <form action="/users/editar/<%=usuarios[i].id%>"><button>   Editar   </button></form> <form action="/users/delete/<%=usuarios[i].id%>" method="POST"><button>   Eliminar   </button></form>
         
         
 </div>

@@ -179,3 +179,28 @@ body {
   .imgEditar {
     display: none;
   }
+
+  .login-list h1 {
+    font-size: initial;
+    color: green;
+  }
+
+  .login-list h2 {
+    font-size: 13;
+  }
+
+  .login-list:hover {
+    border: solid;
+    border-color: #206200;
+}
+
+.login-list {
+  padding: 12;
+  margin: 20px;
+  margin-top: 40px;
+  width: 20%;
+  height: 27%;
+  background: #FFF;
+  border-radius: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}

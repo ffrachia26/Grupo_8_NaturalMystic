@@ -1,0 +1,35 @@
+<%- include('./partials/head', {archivoCss: "register"})%>
+  <%- include('./partials/header.ejs')%>
+  <hr>
+
+
+  <% if (typeof errors != 'undefined') { %>
+    <p style="color: red;"> ERROR</p>
+    <ul>
+      <% for (let i = 0 ; i < errors.length; i++) { %>
+        <li>
+          <%= errors[i].msg %>
+        </li>
+     <% } %>   
+    </ul>
+  <% } %>  
+  <div id="registerBigBox">
+    <div class="registerBox">
+      <h1>Editar Usuario</h1>
+      
+      <form action="/users/editar/<%=usuarios.id%>" method="POST" enctype="multipart/form-data"> 
+      
+      <input type="text" name="nombre" value="<%=usuarios.nombre%>" />
+      <input type="text" name="apellido" value="<%=usuarios.apellido%>" />
+      <input type="text" name="email" value="<%=usuarios.email%>" />
+      <input type="password" name="password" value="<%=usuarios.password%>" />
+      <input type="file" name="avatar"  />
+      
+      <input type="submit" name="signup_submit" value="Editar" />
+    </form>
+    </div>
+  </div>
+    
+    
+    <%- include('./partials/footer.ejs')%>
+

@@ -86,8 +86,14 @@ let usersController =
                 id: req.params.id
             }
         }).then(function(){
-            res.redirect('/')
+            res.redirect('/users/list')
         })
+    },
+    'viewUpdateProfile': function(req, res){
+        db.Usuario.findByPk(req.params.id)
+        .then(function(usuarios){
+            return res.render('editarUsuarios', {usuarios: usuarios})
+        }) 
     },
 
     'updateProfile': function(req, res) {
@@ -105,7 +111,7 @@ let usersController =
                 }
             })
             .then(()=> {
-                return res.redirect()
+                return res.redirect('/users/list')
             })
         })
     }
