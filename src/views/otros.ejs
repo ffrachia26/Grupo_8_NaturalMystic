@@ -7,7 +7,7 @@
 <div class="container-products">
 <% for (let i = 0; i < otros.length; i++) {  %>
 <div class= "lista-products">
-        <img src="/img/products/<%=otros[i].avatar%>" alt="Imagen de producto">
+        <a href="/products/verProducto/<%=otros[i].id%>"><img src="/img/products/<%=otros[i].avatar%>" alt="Imagen de producto"></a>
         <h1><strong><%=otros[i].nombre%></strong></h1>
         <h2><%=otros[i].marca%></h2>
         <h3 style="color: rgb(104, 104, 104);"><i>$<%=otros[i].precio%></i></h3>

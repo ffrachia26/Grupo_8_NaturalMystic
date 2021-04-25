@@ -1,0 +1,20 @@
+<%- include('./partials/head', {archivoCss: "crearEditarProductos"})%>
+ 
+<%- include('./partials/header.ejs')%>
+
+<hr>
+<h1 class="encabezado"><strong>Producto</strong></h1>
+<div class="container-products">
+
+<div class= "producto">
+        <img src="/img/products/<%=producto.avatar%>" alt="Imagen de producto" >
+        <h1><strong><%=producto.nombre%></strong></h1>
+        <h2><%=producto.marca%></h2>
+        <h3 style="color: rgb(104, 104, 104);"><i>$<%=producto.precio%></i></h3>
+        <button>   Agregar al carrito   </button>
+        
+        
+</div>
+
+</div>
+<%- include('./partials/footer.ejs')%>

@@ -11,6 +11,13 @@ let productsController = {
         })             
     },
 
+    'verProducto': function(req, res){
+        db.Producto.findByPk(req.params.id)
+        .then(function(producto){
+            return res.render('productoSeleccionado', {producto: producto})
+        })
+    },
+
     'updateProduct': function(req, res) {
         db.Producto.findByPk(req.params.id)
         .then((producto) => {

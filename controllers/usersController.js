@@ -1,6 +1,7 @@
 let db = require('../database/models');
-let bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+let session = require('express-session')
 
 let usersController = 
 
@@ -22,27 +23,28 @@ let usersController =
      'processLogin': function(req, res){
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let usuarioALoguearse
+            
             db.Usuario.findAll()
             .then(function(users){
                 for (let i = 0; i < users.length; i++){
+                    
                     if (users[i].email == req.body.email){
                         if (bcrypt.compareSync(req.body.password, users[i].password)){
                             let usuarioALoguearse = users[i];
-                            
+                            break;
                         }
-                    } req.session.usuarioLogueado = usuarioALoguearse
+                    } 
                 }
                 if (usuarioALoguearse == undefined) {
                     return res.render('login', {errors: [
                         {msg: 'Credenciales invalidas'}
                     ]});
                 } 
-                req.session.usuarioLogueado = usuarioALoguearse
-                res.redirect('loginsuccess')
+                req.session.usuarioLogueado = usuarioALoguearse;
+                res.render('loginsuccess')
             })
         } else {
-            return res.render('index', {errors: errors.errors});
+            return res.render('login', {errors: errors.errors});
         }
      },
 

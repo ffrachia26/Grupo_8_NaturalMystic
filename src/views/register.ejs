@@ -4,10 +4,10 @@
 
 
   <% if (typeof errors != 'undefined') { %>
-    <p style="color: red;"> ERROR</p>
+    <p style="color: red; padding-left: 12px;"> ERROR</p>
     <ul>
       <% for (let i = 0 ; i < errors.length; i++) { %>
-        <li>
+        <li style="padding-left: 12px;">
           <%= errors[i].msg %>
         </li>
      <% } %>   

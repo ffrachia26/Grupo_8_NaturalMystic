@@ -29,7 +29,18 @@ router.post('/register', upload.any(), [
   check('nombre').isLength({min : 1}).withMessage('El campo "Nombre" debe estar completo'),
   check('apellido').isLength({min: 1}).withMessage('El campo "Apellido" debe estar completo'),
   check('email').isEmail().withMessage('El campo "Email" debe ser un email valido'),
-  check('password').isLength({min: 8}).withMessage('La contraseña debe tener minimo 8 caracteres')
+  check('password').isLength({min: 8}).withMessage('La contraseña debe tener minimo 8 caracteres'),
+  body('email').custom(function(value) {
+    db.Usuario.findAll()
+    .then(function(usuarios){
+      for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].email == value){
+          return false;
+        }
+      }
+      return true;
+    })
+  }).withMessage('Usuario ya existente')
 ], usersController.create)
 
 router.get('/registersuccess', usersController.registersuccess )
