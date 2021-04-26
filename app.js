@@ -5,7 +5,8 @@ const path = require('path');
 const methodOverride = require('method-override');
 const bcrypt = require('bcryptjs')
 const multer = require('multer')
-const session = require('express-session')
+var session = require('express-session')
+const verSession = require('./middlewares/verSession')
 
 //-----------RUTAS--------//
 
@@ -54,7 +55,7 @@ app.use(session({         //Usuage
 
     app.use('/users', rutaUsers)
 
-   
+   app.use(verSession)
 
 app.listen(port, () => console.log('Server listening to port: ${port}'))
 

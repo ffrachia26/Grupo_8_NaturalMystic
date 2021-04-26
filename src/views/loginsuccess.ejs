@@ -2,13 +2,24 @@
   <%- include('./partials/header.ejs')%>
   <hr>
   
-  <div id="login-box">
-    <div class="box">
+  <div id="loginSuccessBox">
+    <div class="Lbox">
       
-      <h1>Login Exitoso!</h1>
+      <h1 id="loginExitoso">Login Exitoso!</h1>
+    <div class="loginEditar">
+        <div class="loginEditarProd">
+          <h1>Productos</h1>
+          <a href="/products/editar"><button>Editar Productos</button></a>
+        </div>
+        <div class="loginEditarUser">
+          <h1>Usuarios</h1>
+          <a href="/users/list"><button>Editar Usuarios</button></a>
+        </div>
+    </div>
 
       
     </div>
+    
   </div>
   
     

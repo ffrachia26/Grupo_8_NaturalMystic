@@ -209,7 +209,7 @@ div.productos div {
 /*div.banners {}*/
 
 .banner1, .banner2, .banner3 {
-    background-color: #1e905e;
+    
     height: 200px;
     border-radius: 6%;
     text-align: center;
@@ -471,7 +471,7 @@ div.banners {
     justify-content: space-evenly;}
 
 .banner1, .banner2, .banner3 {
-    background-color: #1e905e;
+    
     height: 200px;
     border-radius: 6%;
     text-align: center;
@@ -658,17 +658,21 @@ div.banners {
  /*------------IMAGEN--------*/
 .imagenespasando {
     margin: 10px 100px;
+    display: flex ;
+   justify-content: center;
 }
 
 
 .imagenespasando img {
     transition: 0.2s ease;
-    width: 90%;
+    width: 77%;
     border-radius: 2%;
     height: 285px;
+    
 }
-.imagenespasando img {
-    width: 100%;
+.imagenespasando img:hover {
+    width: 80%;
+    height: 295px;
 }
 
 /*------------DESTACADOS----------*/
@@ -789,8 +793,7 @@ div.banners {
     justify-content: space-evenly;}
 
 .banner1, .banner2, .banner3 {
-    background-color: #1e905e;
-    height: 200px;
+        height: 366px;
     border-radius: 6%;
     text-align: center;
     margin: 15px auto;
@@ -798,6 +801,9 @@ div.banners {
     padding: 50px;
  }
 
+ .banner2 {
+     padding-top: 100px;
+ }
 
  /*----------------GALERIA IG Y FORMULARIO----------*/
 
