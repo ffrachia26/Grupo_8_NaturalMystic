@@ -13,7 +13,19 @@ let homeController = {
     },
     'nosotros': function(req, res){
         res.render('quienessomos')
-    }
+    },
+    'search': function(req, res){
+        db.Producto.findAll({
+            where: {
+                nombre: {
+                    [db.Sequelize.Op.like]: '%' + req.query.search + '%',
+                }
+            }
+        }).then(function(busqueda){
+            res.render('searchResult', {busqueda: busqueda})
+        })
+    },
 }
+
 
 module.exports = homeController

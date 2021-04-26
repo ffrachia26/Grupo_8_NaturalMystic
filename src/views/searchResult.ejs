@@ -1,0 +1,20 @@
+<%- include('./partials/head', {archivoCss: "crearEditarProductos"})%>
+ 
+<%- include('./partials/header.ejs')%>
+
+<hr>
+<h1 class="encabezado"><strong>Productos</strong></h1>
+<div class="container-products">
+<% for (let i = 0; i < busqueda.length; i++) {  %>
+<div class= "lista-products">
+        <a href="/products/verProducto/<%=busqueda[i].id%>"><img src="/img/products/<%=busqueda[i].avatar%>" alt="Imagen de producto"></a>
+        <h1><strong><%=busqueda[i].nombre%></strong></h1>
+        <h2><%=busqueda[i].marca%></h2>
+        <h3 style="color: rgb(104, 104, 104);"><i>$<%=busqueda[i].precio%></i></h3>
+        <button>   Agregar al carrito   </button>
+        
+        
+</div>
+<%  }  %>
+</div>
+<%- include('./partials/footer.ejs')%>

@@ -146,6 +146,7 @@ let productsController = {
             res.render('hogar', {hogar: hogar})
         })
     },
+    
 }
 
 module.exports = productsController
