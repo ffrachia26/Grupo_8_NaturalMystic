@@ -390,6 +390,7 @@ footer div.derechos p{
     }
 
     .loginRegister {
+        color: green;
         padding: 10px;
         
     }
@@ -497,3 +498,5 @@ ul li a:hover {
 header .logo:hover{
     width: 66%;   
     };
+
+    

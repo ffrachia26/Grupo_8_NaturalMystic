@@ -2,20 +2,22 @@
     <body>
         
         <header>
+            <div class="logoSearchLogin" style="display: flex; justify-content: space-around;">
             <div class="containerlogo">
-                <a href="/"><img class="logo" src="/img/logo-natural-mystical.png" alt="Logo Natural Mystic"></a> 
+                <a href="/" ><img class="logo" src="/img/logo-natural-mystical.png" alt="Logo Natural Mystic"></a> 
             </div>
     
             <div class="containersearch">      
-                <form action="/search"><input type="search" id="search" placeholder="Buscar Productos..." />
-                <div class="iconsearch"><button><i class="fa fa-search"></i></div></button>
+                <form action="/search"><input type="search" id="search" name="search" placeholder="Buscar Productos.." value="<%= (typeof laQuery != 'undefined') ? laQuery : ' '%>">
+                <div class="iconsearch"><button><i class="fa fa-search "></i></div></button>
                 </form>
             </div>  
         
             <div class="loginRegister">
-                <a href="/users/login">Login</a>
-                <a href="/users/register">/Register</a>
+                <a href="/users/login" style="text-decoration:none">Login</a>
+                <a href="/users/register" style="text-decoration:none">/Register</a>
             </div>
+        </div>
             <nav class="menuNoResposive">
                 <ul>
                   <li><a href="/" class="inicio">Inicio</a></li>

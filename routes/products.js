@@ -36,3 +36,4 @@ router.post('/editar/:id', upload.any(), productsController.updateProduct)
 router.post('/delete/:id', productsController.delete)
 
 module.exports = router
+

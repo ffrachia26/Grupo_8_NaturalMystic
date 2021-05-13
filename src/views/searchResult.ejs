@@ -5,6 +5,8 @@
 <hr>
 <h1 class="encabezado"><strong>Productos</strong></h1>
 <div class="container-products">
+<% if (busqueda.length != 0) { %>
+
 <% for (let i = 0; i < busqueda.length; i++) {  %>
 <div class= "lista-products">
         <a href="/products/verProducto/<%=busqueda[i].id%>"><img src="/img/products/<%=busqueda[i].avatar%>" alt="Imagen de producto"></a>
@@ -16,5 +18,9 @@
         
 </div>
 <%  }  %>
+<% } else {  %>
+
+        <h2 class="encabezado">Oops! No encontramos productos con esa palabra</h1>
+<% } %>
 </div>
 <%- include('./partials/footer.ejs')%>

@@ -22,7 +22,10 @@ let homeController = {
                 }
             }
         }).then(function(busqueda){
-            res.render('searchResult', {busqueda: busqueda})
+            res.render('searchResult', {
+                busqueda: busqueda, 
+                laQuery: req.query.search
+            })
         })
     },
 }

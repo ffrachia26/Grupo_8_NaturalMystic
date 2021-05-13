@@ -4,15 +4,19 @@
 
 <hr>
 <h1 class="encabezado"><strong>Producto</strong></h1>
-<div class="container-products">
+<div class="container-VerProducts">
 
-<div class= "producto">
-        <img src="/img/products/<%=producto.avatar%>" alt="Imagen de producto" >
-        <h1><strong><%=producto.nombre%></strong></h1>
-        <h2><%=producto.marca%></h2>
-        <h3 style="color: rgb(104, 104, 104);"><i>$<%=producto.precio%></i></h3>
-        <button>   Agregar al carrito   </button>
-        
+<div class= "VerProducto">
+        <div class="verProductoImg">
+                <img id="verProductoIMAGEN" src="/img/products/<%=producto.avatar%>" alt="Imagen de producto" >
+        </div>
+        <div class="descripcionProducto">
+                <h1><strong><%=producto.nombre%></strong></h1>
+                <h2><%=producto.marca%></h2>
+                <h4><%=producto.descripcion%></h4>
+                <h3 style="color: rgb(104, 104, 104);"><i>$<%=producto.precio%></i></h3>
+                <button>   Agregar al carrito   </button>
+        </div>
         
 </div>
 

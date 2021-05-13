@@ -16,6 +16,7 @@ const rutaPurchase = require('./routes/purchase')
 const rutaUsers = require('./routes/users');
 const { use } = require('./routes/home');
 const { urlencoded } = require('express');
+const Logueado = require('./middlewares/Logueado');
 
 
 
@@ -56,6 +57,8 @@ app.use(session({         //Usuage
     app.use('/users', rutaUsers)
 
    app.use(verSession)
+
+   app.use(Logueado)
 
 app.listen(port, () => console.log('Server listening to port: ${port}'))
 

@@ -4,10 +4,9 @@ var usersApiController = require ("../../controllers/api/usersApiController");
 
 router.get("/" , usersApiController );
 
-router.get('/', usersApiController.list);
-router.get('/:id', usersApiController.detail);
-// router.post('/create', apiUserController.create);
-// router.put('/update/:id', apiUserController.update);
-// router.delete('/delete/:id', apiUserController.delete)
+router.get('/getUsers', usersApiController.listUsers);
+router.get('/getUsers/:id', usersApiController.detail);
+router.get('/getProducts', usersApiController.listProducts)
+router.get('/getProducts/:id', usersApiController.detailProduct)
 
 module.exports = router;
